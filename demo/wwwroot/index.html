@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="lib/angular/angular.js"></script>    
+    <script src="lib/spring-grid/spiral-grid.js"></script>        
+    <script src="controllers/controllers.js"></script>
+    <script src="app.js"></script>    
+    <style type="text/css" >
+
+        body,
+        html {
+            font-family: Tahoma, sans-serif;
+            font-size: small;
+            margin: 0;
+            padding: 0;
+        }
+
+        .spiral
+        {            
+            margin: auto;
+        }
+
+        .spiral_item
+        {
+            width: 80px;
+            height: 50px;
+            color: #ffffff;
+            text-align: center;
+            clear: right;
+            margin: 4px;
+            padding: 4px;
+            float: left;
+            border: 3px solid brown;
+        }
+
+    </style>
+    <title>spiral</title>
+</head>
+<body ng-app="aha.ng.demo" >
+
+    <div ng-controller="personCtrl" >
+        <spiral_grid model="persons" columns="name,phone"></spiral_grid>
+    </div>
+    <div ng-controller="cityCtrl">
+        <spiral_grid model="cities" columns="name,state"></spiral_grid>
+    </div>
+
+</body>
+</html>
